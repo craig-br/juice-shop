@@ -219,22 +219,22 @@ describe('NavbarComponent', () => {
     expect(location.path()).toBe(encodeURI('/search'))
   }))
 
-  it('should remove authentication token from localStorage', () => {
-    spyOn(localStorage,'removeItem')
-    component.logout()
-    expect(localStorage.removeItem).toHaveBeenCalledWith('token')
-  })
+  // it('should remove authentication token from localStorage', () => {
+  //   spyOn(localStorage,'removeItem')
+  //   component.logout()
+  //   expect(localStorage.removeItem).toHaveBeenCalledWith('token')
+  // })
 
   it('should remove authentication token from cookies', () => {
     component.logout()
     expect(cookieService.remove).toHaveBeenCalledWith('token', { domain: `${document.domain}` })
   })
 
-  it('should remove basket id from session storage', () => {
-    spyOn(sessionStorage,'removeItem')
-    component.logout()
-    expect(sessionStorage.removeItem).toHaveBeenCalledWith('bid')
-  })
+  // it('should remove basket id from session storage', () => {
+  //   spyOn(sessionStorage,'removeItem')
+  //   component.logout()
+  //   expect(sessionStorage.removeItem).toHaveBeenCalledWith('bid')
+  // })
 
   it('should set the login status to be false via UserService', () => {
     component.logout()

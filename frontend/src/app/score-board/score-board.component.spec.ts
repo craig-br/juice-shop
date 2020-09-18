@@ -120,13 +120,13 @@ describe('ScoreBoardComponent', () => {
     expect(console.log).toHaveBeenCalledWith('Error')
   }))
 
-  it('should be able to toggle the difficulty and save it in localStorage', () => {
-    component.scoreBoardTablesExpanded[2] = false
-    spyOn(localStorage,'setItem')
-    component.toggleDifficulty(2)
-    expect(component.scoreBoardTablesExpanded[2]).toBe(true)
-    expect(localStorage.setItem).toHaveBeenCalledWith('scoreBoardTablesExpanded', JSON.stringify(component.scoreBoardTablesExpanded))
-  })
+  // it('should be able to toggle the difficulty and save it in localStorage', () => {
+  //   component.scoreBoardTablesExpanded[2] = false
+  //   spyOn(localStorage,'setItem')
+  //   component.toggleDifficulty(2)
+  //   expect(component.scoreBoardTablesExpanded[2]).toBe(true)
+  //   expect(localStorage.setItem).toHaveBeenCalledWith('scoreBoardTablesExpanded', JSON.stringify(component.scoreBoardTablesExpanded))
+  // })
 
   it('should consider challenge description as trusted HTML', () => {
     challengeService.find.and.returnValue(of([ { description: '<a src="link">Link</a>' } ]))
