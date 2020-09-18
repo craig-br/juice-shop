@@ -129,11 +129,11 @@ describe('DataSubjectComponent', () => {
     expect(securityQuestionService.findBy).not.toHaveBeenCalled()
   })
 
-  it('should remove authentication token from localStorage', () => {
-    spyOn(localStorage,'removeItem')
-    component.logout()
-    expect(localStorage.removeItem).toHaveBeenCalledWith('token')
-  })
+  // it('should remove authentication token from localStorage', () => {
+  //   spyOn(localStorage,'removeItem')
+  //   component.logout()
+  //   expect(localStorage.removeItem).toHaveBeenCalledWith('token')
+  // })
 
   it('should remove authentication token from cookies', () => {
     component.logout()
