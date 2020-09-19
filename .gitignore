@@ -28,7 +28,7 @@ out/
 *.iml
 *.iws
 *.swp
-
+.scannerwork/
 # Branch ghpages
 assets/
 !frontend/src/assets/
